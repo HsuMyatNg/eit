@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+:root{
+    --cyan:rgba(186, 218, 232,1);
+    --red:#a0ed07;
+    --blue:#0b07ff;
+    --btnbg: #ed6307;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: rgb(247, 242, 242) !important;
+
+}
+*{
+    font-family: 'Comfortaa', cursive;
+    box-sizing: border-box;
+    transition: all 1s linear;
+}
+/* header */
+.navbar{
+    background-color: var(--cyan)!important;
+}
+header .navbar .navbar-nav .nav-link{
+    color: var(--blue) !important;
+    font-size: 16px;
+}
+header .navbar .navbar-nav .nav-link:hover{
+    color: var(--btnbg) !important;
+    font-size: 18px;
+    font-weight: 600;
+}
+.navbar-toggler{
+    box-shadow: none !important;
+    border: solid 1px var(--red) !important;
+}
+
+/* end header */
+/* Home */
+#Home{
+    background-image:  linear-gradient(rgba(7, 7, 44, 0.1),rgba(0, 0, 0, 0.5)),url('../images/EIT_Background.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 3;
+}
+#Home::after{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0,0,0,0.35); */
+    z-index: -1;
+    position: absolute;
+}
+#Home .btnfind{
+    width: 150px;
+    height: 40px;
+    border: solid 1.5px var(--red);
+    background-color: var(--btnbg);
+    font-size: 14px;
+    transition: 0.5s ease-in-out;
+}
+#Home .btnfind:hover{
+    box-shadow: 5px 5px grey;
+    background-color: #fff ;
+    color: var(--btnbg) !important;
+    border-color: var(--btnbg);
+    width: 160px;
+    height: 45px;
+}
+#Home .newsupdate{
+    background: transparent linear-gradient(to right, rgba(255, 255, 255, 0), rgb(54, 72, 255), rgba(255, 255, 255, 0)) repeat scroll 0 0;
+}
+#Home .newsupdate a{
+    text-decoration: none !important;
+    color: white !important;
+}
+/* End Home */
+/* About */
+#About{
+    color: var(--blue);
+    position: relative;
+    /* overflow: hidden; */
+}
+.aboutitems{
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.3) !important;
+}
+#About .aboutitems::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%; left: 0;
+    background-color: var(--blue);
+    z-index: -1;
+    opacity: 0;
+    transition: all ease 1s;
+}
+#About .aboutitems:hover{
+    transform: translateY(5px);
+    color: #fff;
+}
+#About .aboutitems:hover::after{
+    opacity: 1;
+    top: 0;
+}
+.subtitle::after{
+    content: "";
+    width: 8%;
+    height: 3px;
+    background: var(--blue);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+#About .aboutitems:hover .subtitle::after{
+    background-color: #fff;
+}
+
+/* End About */
+/* Past */
+#Past{
+    color: var(--blue);
+    position: relative;
+    font-size: 16px;
+}
+#Past h6{
+    color: var(--btnbg) !important;
+}
+#Past .subtitle::after{
+    content: "";
+    width: 8%;
+    height: 3px;
+    background: var(--btnbg);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+#Past span a{
+    color: var(--btnbg) !important;
+    text-decoration: none;
+}
+.myeikgroup{
+    position: relative;
+}
+.myeikgroup img{
+    width: 100%;
+    height: 300px;
+    top: 0; left: 0;
+    /* border-radius: 30px 30px; */
+    /* border: 2px solid var(--btnbg); */
+
+}
+.myeikcontent{
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0; left: 0;
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    height: 300px;
+    /* border-radius: 30px 30px; */
+    /* border: 2px solid var(--btnbg); */
+
+}
+.patheingroup{
+    position: relative;
+}
+.patheingroup img{
+    width: 100%;
+    height: 300px;
+    top: 0; left: 0;
+    /* border-radius: 30px 30px; */
+    /* border: 2px solid var(--btnbg); */
+}
+#Past .card{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    /* position: absolute; */
+    color: #fff;
+    /* border: solid 2px var(--btnbg) !important; */
+    top: -50px;
+}
+.yadanabon{
+    position: relative;
+}
+.patheingroup .shadow-lg:hover{
+    transform: translateY(10px);
+}
+#Past .yadanabon img{
+    width: 100%;
+    height: 250px;
+    top: 0; left: 0;
+    /* position: relative; */
+}
+.yadanaboncontent{
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0; left: 0;
+    width: 100%;
+    position: absolute;
+    color: #fff;
+    height: 250px;
+    /* border-radius: 30px 30px; */
+    /* border: 2px solid var(--btnbg); */
+}
+#Past img:hover{
+    transform: translateY(10px);
+}
+#Past .orphanage:hover{
+    transform: translateY(10px);
+}
+/* New Activities */
+#New{
+    position: relative;
+    color: var(--blue);
+}
+#New .subtitle::after{
+    content: "";
+    width: 8%;
+    height: 3px;
+    background: var(--btnbg);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.newactivities .shadow-lg:hover{
+    transform: translateY(10px);
+}
+/* Programs */
+#Program{
+    color: var(--blue);
+    position: relative;
+}
+#Program .subtitle::after{
+    content: "";
+    width: 8%;
+    height: 3px;
+    background: var(--btnbg);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.programitem h4{
+    color: var(--btnbg);
+}
+.programitem .btndetail{
+    width: 100px;
+    height: 30px;
+    border: solid 1px var(--btnbg);
+    color: var(--blue);
+}
+.btnclose{
+    width: 100px;
+    height: 30px;
+    border: solid 1px var(--btnbg);
+    color: var(--blue);
+}
+.modal .bi-diamond{
+    color: var(--btnbg) !important;
+    font-size: 15px;
+}
+/* Collaboration */
+#Collaboration{
+    color: var(--blue);
+    position: relative;
+}
+#Collaboration .subtitle::after{
+    content: "";
+    width: 8%;
+    height: 3px;
+    background: var(--btnbg);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+#Collaboration .shadow-lg:hover{
+    transform: translateY(5px);
+}
+/* Contact */
+#Contact{
+    color: var(--blue);
+}
+#Contact .subtitle::after{
+    content: "";
+    width: 8%;
+    height: 3px;
+    background: var(--btnbg);
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+#Contact a{
+    text-decoration: none;
+}
+/* footer */
+footer{
+    background: transparent linear-gradient(to right, rgba(255, 255, 255, 0), rgb(54, 72, 255), rgba(255, 255, 255, 0));
+
+}
